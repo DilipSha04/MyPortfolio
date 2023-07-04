@@ -1,6 +1,6 @@
 
 //for left to right animatoin
-const observer = new IntersectionObserver((entries) => {
+const observerLeft = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
             entry.target.classList.add('show')
@@ -11,11 +11,11 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 const hiddenElementLeft = document.querySelectorAll('.NotVisible')
-hiddenElementLeft.forEach((el) => observer.observe(el))
+hiddenElementLeft.forEach((el) => observerLeft.observe(el))
 
 // For right to left animation 
 
-const observer2 = new IntersectionObserver((entries) => {
+const observerRight = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
             entry.target.classList.add('show')
@@ -26,4 +26,4 @@ const observer2 = new IntersectionObserver((entries) => {
 });
 
 const hiddenElementRight = document.querySelectorAll('.NotVisibleRight')
-hiddenElementRight.forEach((el) => observer.observe(el))
+hiddenElementRight.forEach((el) => observerRight.observe(el))
