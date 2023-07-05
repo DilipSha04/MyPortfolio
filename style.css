@@ -5,13 +5,13 @@
     opacity: 0;
     filter: blur(3px);
     transform: translateX(-100%);
-    transition: all 2s;
+    transition: all 1s;
 }
 .NotVisibleRight{
     opacity: 0;
     filter: blur(3px);
     transform: translateX(100%);
-    transition: all 2s;
+    transition: all 1s;
 }
 .show{
     opacity: 1;
