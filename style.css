@@ -81,11 +81,11 @@
     white-space: nowrap;
    }
    @keyframes slide {
+     0% {
+       transform: translateX(-100%); /* Adjust the translateX value based on the number of images */
+     }
     100%{
       transform: translateX(20%);
-    }
-    0% {
-      transform: translateX(-120%); /* Adjust the translateX value based on the number of images */
     }
   }
 
