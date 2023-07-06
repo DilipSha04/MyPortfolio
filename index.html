@@ -62,12 +62,14 @@
                   ></div>
                 </li>
               </ul>
-              <div class="lg:hidden">
+              <div class="lg:hidden" onclick="openFunction()">
                 <svg
                   viewBox="0 0 48 48"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#000000"
                   class="w-[50px] mr-[10px] animate__animated animate__swing animate__delay-1s menu_icon"
+                  id="openMenu"
+                  
                 >
                   <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                   <g
@@ -117,6 +119,46 @@
                     ></rect>
                   </g>
                 </svg>
+              </div>
+            </div>
+          </div>
+          <!-- side navbar for mobile -->
+          <div class="w-[60%] h-[100%] fixed flex flex-col top-0 bottom-0 -left-[60%] lg:hidden z-50 bg-white px-[2rem] py-[2rem] rounded-r-md transition-all duration-300 overflow-hidden " id="slideNavbar">
+            <div class="w-[40px] absolute top-[20px]" id="closeMenu" onclick="closeFunction()">
+              <img src="images/close-svgrepo-com (1).svg" alt="">
+            </div>
+            <!-- navlink -->
+            <div class="mt-[4rem]">
+              <ul class="flex flex-col justify-between gap-y-4">
+                <li class="mx-2 text-[20px] font-['Cambay'] group">
+                  <a href="#about">About Me</a>
+                </li>
+
+                <hr class="h-[2px] w-[60%] bg-slate-800">
+
+                <li class="mx-2 text-[20px] font-['Cambay'] group">
+                  <a href="#skill">Skills</a>
+                </li>
+
+                <hr class="h-[2px] w-[60%] bg-slate-800">
+
+                <li class="mx-2 text-[20px] font-['Cambay'] group">
+                  <a href="#project">Projects</a>
+                </li>
+
+                <hr class="h-[2px] w-[60%] bg-slate-800">
+
+                <li class="mx-2 text-[20px] font-['Cambay'] group">
+                  <a href="#contact">Contact</a>
+                </li>
+
+                <hr class="h-[2px] w-[60%] bg-slate-800">
+              </ul>
+              <div class="my-[4rem] -px-[2rem]">
+                <h1
+                class="text-[20px] font-['Exo'] font-[700] animate__animated cursor-pointer animate__backInLeft animate__delay-1s" id="nameTag">
+                <a href="/">&#x2039;Dilip Sharma &#x2044;&#x203A;</a>
+              </h1>
               </div>
             </div>
           </div>
@@ -286,7 +328,7 @@
             </h3>
             <!-- left side-gredient-cover images -->
             <div
-              class="absolute w-[60px] left-0 top-[30%] h-[80px] z-50"
+              class="absolute w-[60px] left-0 top-[30%] h-[80px] z-40"
               style="background: linear-gradient(90deg, #ffffff, #fff0)"
             ></div>
             <div class="flex Slider space-x-14 mt-[1rem]">
@@ -343,7 +385,7 @@
             </div>
             <!-- right side-gredient-cover images -->
             <div
-              class="absolute w-[60px] right-0 top-[30%] h-[80px] z-50"
+              class="absolute w-[60px] right-0 top-[30%] h-[80px] z-40"
               style="background: linear-gradient(270deg, #ffffff, #fff0)"
             ></div>
             <!-- soft-skills -->
@@ -581,8 +623,7 @@
       </div>
       <!-- footer -->
       <div
-        class="relative bg-[url(images/footerwave.svg)] bg-no-repeat bg-cover bg-center z-0 lg:h-[50vh] h-[90vh]"
-      >
+        class="relative bg-[url(images/footerwave.svg)] bg-no-repeat bg-cover bg-center z-0 lg:h-[50vh] h-[90vh]">
         <h1
           class="text-center font-['Exo'] text-[28px] font-[700] text-slate-800"
         >
@@ -717,6 +758,17 @@
        return returnval;
       }
 
+
+        /********** open close menu for mobile phones*************/
+
+        function openFunction(){
+          document.getElementById("slideNavbar").style.left = "0%"
+        }
+
+        function closeFunction(){
+          document.getElementById("slideNavbar").style.left = "-60%"
+          
+        }
     </script>
   </body>
 </html>
