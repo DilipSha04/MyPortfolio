@@ -77,15 +77,16 @@
    .Slider{
     animation: slide 10s linear infinite;
     width: fit-content;
-    animation-delay: -2s;
+    animation-delay: 1s;
     white-space: nowrap;
+    scroll-behavior: smooth;
    }
    @keyframes slide {
      0% {
-       transform: translateX(-100%); /* Adjust the translateX value based on the number of images */
+       transform: translateX(-120%); /* Adjust the translateX value based on the number of images */
      }
     100%{
-      transform: translateX(20%);
+      transform: translateX(10%);
     }
   }
 
