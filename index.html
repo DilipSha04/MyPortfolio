@@ -183,8 +183,8 @@
             <h2
               class="text-[28px] text-center lg:text-left font-['Maven Pro'] font-[700] mb-3 text-[#0f172a] anim_subheading"
             >
-              And I'm <br />
-              <span class="text-[#6900ff]">Frontend Developer</span>
+              And I'm <br/>
+              <span class="text-[#6900ff] typeText"></span>
             </h2>
             <p
               class="text-[24px] text-center lg:text-left font-['Cambay'] lg:leading-[42px] text-[#475569] anim_para"
@@ -695,7 +695,12 @@
       </div>
     </div>
 
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
+      
+
+
+
       /***************For layout animation***************/
       //for left to right animatoin
       const observerLeft = new IntersectionObserver((entries) => {
@@ -725,6 +730,16 @@
 
       const hiddenElementRight = document.querySelectorAll(".NotVisibleRight");
       hiddenElementRight.forEach((el) => observerRight.observe(el));
+
+
+       /***************typeing animation****************/
+
+       var mytypedText = new Typed(".typeText", {
+            strings: ["Frontend Developer", "Web Developer", "Web Designer"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+          });
 
       /**************************for Form Submission***********/
 
